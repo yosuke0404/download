@@ -30,8 +30,3 @@ def download_video(request):
             messages.warning(request, 'Please Enter Video URL')
             return redirect('home')
     return redirect('home')
-
-def download_local(request):
-    #filename, filepath = filename, filepath
-    #return FileResponse(open(os.path.join(filepath, filename), "rb"), as_attachment=True, filename=filename)
-    return render(request, 'video/downloaded.html')
